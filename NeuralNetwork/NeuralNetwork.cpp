@@ -172,6 +172,8 @@ void NeuralNetwork::fit(const Matrix& X, const Matrix& y, const int& epochs, con
             //Calculates the derivative of the loss function and starts backpropogation of the final layer
             Matrix loss;
             if (classify){
+             
+                //The loss function being optimised for classification is the negative log-likelihood
                 loss = (y_pred - y.getRow(row))*(-1);
                 
                 //Calculates da/dz
@@ -191,6 +193,8 @@ void NeuralNetwork::fit(const Matrix& X, const Matrix& y, const int& epochs, con
                 loss = loss * da;
             }
             else{
+             
+                //The loss function being optimised is mean squared error
                 loss = y.getRow(row) - y_pred;
                 
                 //dL/dz = dL/da * da/dz
