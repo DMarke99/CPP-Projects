@@ -16,6 +16,11 @@ SDL 2.0
 2) Download the [Particle Box Simulation Folder](https://github.com/DMarke99/CPP-Projects/tree/master/ParticleBoxSimulation).
 3) Execute by compiling [main.cpp](https://github.com/DMarke99/CPP-Projects/blob/master/ParticleBoxSimulation/main.cpp).
 
+## Usage
+
+- Click and hold screen to rotate viewing angle.
+- Change settings before the main loop to alter mass per particle and number of particles.
+
 ## Implementation
 
 ### Acceleration and Velocity Calculation
