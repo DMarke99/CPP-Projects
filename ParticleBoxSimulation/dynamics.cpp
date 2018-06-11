@@ -40,8 +40,8 @@ const Vector unit_vec(const Vector& r1, const Vector& r2) {
  const Vector newton_grav(const double& M, const Vector& r1, const Vector& r2){
     double inv_sq = (r1-r2)*(r1-r2);
     double dist = sqrt(inv_sq);
-    if (inv_sq > particle_radius*particle_radius){return (G* (M)/(inv_sq+0.00001)) * unit_vec(r1, r2);}
-    else{return (G* (M)/(particle_radius*particle_radius+0.00001)) * unit_vec(r1, r2) * (dist/particle_radius);}
+    if (inv_sq > particle_radius*particle_radius){return (G* (M)/(inv_sq+0.0001)) * unit_vec(r1, r2);}
+    else{return (G* (M)/(particle_radius*particle_radius+0.0001)) * unit_vec(r1, r2) * (dist/particle_radius);}
 };
 
 ParticleBox::ParticleBox(double width){
