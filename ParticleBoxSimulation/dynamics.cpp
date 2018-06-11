@@ -83,14 +83,14 @@ void ParticleBox::add_particles(const int& n, const double& mass, const double& 
 void update_particle(vector<Particle>& particles,const int start, const int end, const double dt, const double threshold, const Octree p_tree){
     Vector k1, k2, k3;
     for (int i = start; i < end; ++i){
-    k1 = dt * p_tree.grav(particles[i].index, particles[i].x, threshold);
-    k2 = dt * p_tree.grav(particles[i].index, particles[i].x + 0.5 * dt * particles[i].v
-                                 + 0.125 * dt * k1, threshold);
-    k3 = dt * p_tree.grav(particles[i].index, particles[i].x + dt * particles[i].v
-                                 + 0.5 * dt * k2, threshold);
-    
-    particles[i].temp_x = particles[i].x + dt * (particles[i].v + (k1 + 2*k2)/6);
-    particles[i].v = particles[i].v + k1/6 + 2*k2/3 + k3/6;
+        k1 = dt * p_tree.grav(particles[i].index, particles[i].x, threshold);
+        k2 = dt * p_tree.grav(particles[i].index, particles[i].x + 0.5 * dt * particles[i].v
+                                     + 0.125 * dt * k1, threshold);
+        k3 = dt * p_tree.grav(particles[i].index, particles[i].x + dt * particles[i].v
+                                     + 0.5 * dt * k2, threshold);
+
+        particles[i].temp_x = particles[i].x + dt * (particles[i].v + (k1 + 2*k2)/6);
+        particles[i].v = particles[i].v + k1/6 + 2*k2/3 + k3/6;
     }
 };
 
