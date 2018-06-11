@@ -20,7 +20,7 @@ SDL 2.0
 
 ### Acceleration and Velocity Calculation
 
-For calculating acceleration and velocity, I used the Runge-Kutta 4th order method, as I found that this bounded total energy better due to being correct up to a higher order. Directly calculating each force interaction scales like O(n<sup>2</sup>), so I instead used the Barnst-Hut Method, by using an Octree to efficiently approximate forces for clusters of distant bodies.
+For calculating acceleration and velocity, I used the Runge-Kutta 4th order method, as I found that this bounded total energy better than linear approximations due to being correct up to order 4 compared to order 2. Directly calculating each force interaction scales like O(n<sup>2</sup>), so I instead used the Barnst-Hut Method, by using an Octree to efficiently approximate forces for clusters of distant bodies.
 
 ### Multithreading
 
