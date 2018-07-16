@@ -1,6 +1,6 @@
-# Recurrent Neural Network Project
+# Artificial Neural Network Project
 
-This is a recurrent neural network class implemented in C++ over 3 days in my Easter holiday.
+This is an artificial neural network class implemented in C++ over 3 days in my Easter holiday.
 
 ## Prerequisites
 
@@ -76,12 +76,12 @@ Defines a recurrent neural network class.
 
 ##### Private Attributes:
 
-inputs: The number of nodes in the first layer of the RNN.  
-outputs: The number of nodes in the output layer of the RNN.  
+inputs: The number of nodes in the first layer of the ANN.  
+outputs: The number of nodes in the output layer of the ANN.  
 W: The weights associated with each pair of adjacent layers.  
-layers: The layer scheme of the RNN.  
+layers: The layer scheme of the ANN.  
 activation: The activation function used in the hidden layers. Choice between Sigmoid, ReLU, leaky ReLU and linear.  
-classify: A boolean determining whether the RNN is used as a classifier. If a classifier, softmax is used in final layer.  
+classify: A boolean determining whether the ANN is used as a classifier. If a classifier, softmax is used in final layer.  
 
 ##### Methods
 
@@ -92,7 +92,7 @@ predict: Generates a prediction based on current weights.
 
 ## Contributers
 
-This project was created entirely by myself over 3 days in my Easter break. The greatest challenge I overcame was implementing the feed forward and backpropogation in the RNN, and calculating the derivatives/gradients using matrices.
+This project was created entirely by myself over 3 days in my Easter break. The greatest challenge I overcame was implementing the feed forward and backpropogation in the ANN, and calculating the derivatives/gradients using matrices.
 
 
 
